@@ -1,0 +1,34 @@
+/*Stilmall för all text*/
+
+h1 {
+    color: rgb(121, 104, 76);
+    font-weight: 100;
+    font-size: 24pt;
+    line-height: 1.9em;
+    font-weight: 600;
+}
+
+h2 {
+    color: rgb(139, 107, 0);
+    font-size: 20pt;
+    line-height: 1.5em;
+}
+
+h3 {
+    color:grey;
+    line-height: 1.5em;
+    font-size: 17pt;
+    text-transform: uppercase;
+}
+
+#lblGreetings{
+    color: rgb(107, 108, 87);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 40px;
+    display: block;
+}
+
+p {
+    line-height: 1.5em;
+    font-size: 12pt;
+}

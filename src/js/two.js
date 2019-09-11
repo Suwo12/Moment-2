@@ -1,0 +1,1 @@
+console.log("hej från andra jsfilen");
