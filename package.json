@@ -1,0 +1,36 @@
+{
+  "name": "gulp-test",
+  "version": "1.0.0",
+  "description": "Laboration två",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suwo12/Moment-2.git"
+  },
+  "keywords": [
+    "gulp",
+    "node.js",
+    "laboration"
+  ],
+  "author": "Susanne Wolter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suwo12/Moment-2/issues"
+  },
+  "homepage": "https://github.com/Suwo12/Moment-2#readme"
+}
