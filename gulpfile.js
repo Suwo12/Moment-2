@@ -12,13 +12,15 @@ function defaultTask(cb) {
   const uglyfy = require("gulp-uglify-es").default;
   const livereload = require("gulp-livereload");
   const autoprefixer = require('gulp-autoprefixer');
+  const imagemin = require('gulp-imagemin');
   
 
   /* Sökväg till arbetsfiler */
   const files = {
     htmlPath: "src/**/*.html",
     jsPath: "src/**/*.js",
-    cssPath: "src/**/*.css"
+    cssPath: "src/**/*.css",
+    imgPath: "src/images/*"
   }
 
 
@@ -26,6 +28,13 @@ function defaultTask(cb) {
   function copyHTML(){
     return src(files.htmlPath)
     .pipe(dest('pub')
+    );
+  }
+
+  function copyImages(){
+    return src(files.imgPath)
+    .pipe(imagemin())
+    .pipe(dest('pub/images/')
     );
   }
 
@@ -51,14 +60,14 @@ function defaultTask(cb) {
   /* Lyssnar efter ändringar i html-, js- och css-filer, om ändring körs ihopslagen kopia till pub */
   function watchTask() {
     livereload.listen();
-    watch([files.htmlPath, files.jsPath, files.cssPath],
-    parallel(copyHTML, jsTask, cssTask),
+    watch([files.htmlPath, files.jsPath, files.cssPath, files.imgPath],
+    parallel(copyHTML, jsTask, cssTask, copyImages),
       );
   }
 
   // Tasks som ska köras default, gör de publika funktionerna publika för att kunna köras
   exports.default = series(
   defaultTask,
-  parallel(copyHTML, jsTask, cssTask),
+  parallel(copyHTML, jsTask, cssTask, copyImages),
   watchTask
   );

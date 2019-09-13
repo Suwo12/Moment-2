@@ -1,1 +1,0 @@
-var greet,myDate=new Date,hrs=myDate.getHours();hrs<12?greet="God morgon":hrs>=12&&hrs<=17?greet="God eftermiddag":hrs>=17&&hrs<=24&&(greet="God kväll"),document.getElementById("lblGreetings").innerHTML="<b>"+greet+"</b> och välkommen till min webbplats!",console.log("hej från första jsfilen"),console.log("hej från andra jsfilen");
